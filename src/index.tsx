@@ -14,9 +14,9 @@ import {
 import Header from '@edx/frontend-component-header';
 import { FooterSlot } from '@edx/frontend-component-footer';
 import messages from './i18n';
-import ExamplePage from './example/ExamplePage';
 
 import './index.scss';
+import { CourseList } from './course-list/CourseList';
 
 const queryClient = new QueryClient();
 
@@ -28,7 +28,7 @@ subscribe(APP_READY, () => {
     <AppProvider>
       <QueryClientProvider client={queryClient}>
         <Header />
-        <ExamplePage />
+        <CourseList />
         <FooterSlot />
       </QueryClientProvider>
     </AppProvider>,
